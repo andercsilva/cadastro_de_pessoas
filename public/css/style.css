@@ -283,6 +283,7 @@ h3 {
   position: relative;
   margin-top: 15px;
 }
+/** Cor paginação atual **/
 .green {
   background-color: green;
 }

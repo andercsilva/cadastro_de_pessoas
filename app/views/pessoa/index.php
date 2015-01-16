@@ -55,7 +55,7 @@
       </h1>
       <label>
           <span><?php echo $model->getLabel('nome') ?>:</span>
-          <input id="nome" name="pessoa[nome]" placeholder="Digite seu nome" type="text">
+          <input id="nome" name="pessoa[nome]" placeholder="Digite seu nome" type="text" required="required">
       </label>
       
       <label>

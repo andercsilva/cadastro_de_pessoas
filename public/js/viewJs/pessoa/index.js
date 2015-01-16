@@ -124,23 +124,26 @@ $(document).on('click', 'a.edit', function(e) {
 //Deleta a informação
 $(document).on('click', 'a.delete', function(e) {
 	var url = $(this).attr('data-url');
-	jQuery.ajax({
-		url : url,
-		type : 'GET',
-		beforeSend : function() { 
-			$('table').showLoading({'addClass': 'loading-indicator-bars'});
-		},
-		success : function(data) {
-			$('table').hideLoading();
-			$.showAlert(data, 'success');
-			$.updateTable('/pessoa/search/' + $.pagina);
-		},
-		error : function(a,b,c){ 
-			$('table').hideLoading();
-			$.showAlert(a.responseText, 'error');
-		},		
-		'cache':false		
-	});	
+	if (confirm("Confirma a exclusão desse registro?"))
+  	{
+		jQuery.ajax({
+			url : url,
+			type : 'GET',
+			beforeSend : function() { 
+				$('table').showLoading({'addClass': 'loading-indicator-bars'});
+			},
+			success : function(data) {
+				$('table').hideLoading();
+				$.showAlert(data, 'success');
+				$.updateTable('/pessoa/search/' + $.pagina);
+			},
+			error : function(a,b,c){ 
+				$('table').hideLoading();
+				$.showAlert(a.responseText, 'error');
+			},		
+			'cache':false		
+		});	
+	}
 	return false;	
 });
 
