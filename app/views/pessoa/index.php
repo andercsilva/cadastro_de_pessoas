@@ -34,8 +34,8 @@
           <td><?php echo $data->sobrenome; ?></td>
           <td><?php echo $data->endereco; ?></td>
           <td>
-            <a href="#" class="edit" data-url="/pessoa/edit/<?php echo $data->id ?>" class="button">Editar</a>
-            <a href="#" class="delete" data-url="/pessoa/delete/<?php echo $data->id ?>" class="button">Excluir</a>
+            <a href="#" title="Editar registro" class="edit" data-url="/pessoa/edit/<?php echo $data->id ?>" class="button"><img src="/images/editar.png"/></a>
+            <a href="#" title="Excluir registro" class="delete" data-url="/pessoa/delete/<?php echo $data->id ?>" class="button"><img src="/images/excluir.png"/></a>
           </td>
         </tr>
   	  <?php endforeach; ?>

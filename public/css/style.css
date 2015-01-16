@@ -1,3 +1,6 @@
+body {
+  font-family: arial;
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +15,7 @@ h1 {
 /** Tabela **/
 table {
   color: #333;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: arial;
   font-size: .9em;
   font-weight: 300;
   text-align: left;
@@ -177,7 +180,7 @@ body div.loading-indicator-bars {
 
 h3 {
   text-align: center;
-  font-family: georgia;
+  font-family: arial;
   color: #727272;
   border-bottom: 1px solid #EEE;
   padding: 5px;
@@ -191,7 +194,7 @@ h3 {
     max-width: 500px;
     background: #F7F7F7;
     padding: 25px 15px 25px 10px;
-    font: 12px Georgia, "Times New Roman", Times, serif;
+    font: 12px arial;
     color: #888;
     text-shadow: 1px 1px 1px #FFF;
     border:1px solid #E4E4E4;
@@ -203,6 +206,7 @@ h3 {
     border-bottom:1px solid #E4E4E4;
     margin: -10px -15px 30px -10px;;
     color: #888;
+    text-align: left;
 }
 .basico h1>span {
     display: block;
@@ -267,9 +271,15 @@ h3 {
 }
 /** Janela **/
 .windowCadastro {
-  background: #666666 url(../images/fundoloading.png) 50% 50% repeat; 
+  background-color: #fff;
 }
 
 .width20 {
   width:20px;
+}
+
+/** Botões excluir e deletar **/
+.edit img, .delete img {
+  position: relative;
+  margin-top: 15px;
 }

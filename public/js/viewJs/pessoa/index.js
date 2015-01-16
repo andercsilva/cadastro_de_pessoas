@@ -19,7 +19,7 @@ $.populateTable = function(pessoas) {
  		item = item + "<td>" + pessoa.nome + "</td>";
  		item = item + "<td>" + pessoa.sobrenome + "</td>";
  		item = item + "<td>" + pessoa.endereco + "</td>";
- 		item = item + '<td><a href="#" class="edit" data-url="/pessoa/edit/'+pessoa.id+'" class="button">Editar</a><a href="#" class="delete" data-url="/pessoa/delete/'+pessoa.id+'" class="button">Excluir</a></td></tr>';
+ 		item = item + '<td><a href="#" class="edit" title="Editar registro"  data-url="/pessoa/edit/'+pessoa.id+'" class="button"><img src="/images/editar.png"/></a><a href="#" class="delete" title="Excluir registro" data-url="/pessoa/delete/'+pessoa.id+'" class="button"><img src="/images/excluir.png"/></a></td></tr>';
  		table.html(item);
 	}); 
 
@@ -140,7 +140,8 @@ $(document).on('click', 'a.delete', function(e) {
 			$.showAlert(a.responseText, 'error');
 		},		
 		'cache':false		
-	});		
+	});	
+	return false;	
 });
 
 //Envia a informação do cadastro ou alteração
@@ -172,6 +173,7 @@ $(document).on('submit', '#cadastro', function(e) {
 
 $(document).on('click', '.cancelar', function(e) {
 	$('.windowCadastro').hide();
+	return false;
 });
 
 //Ao clicar na paginação
